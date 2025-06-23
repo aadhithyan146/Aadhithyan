@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       units = parseFloat(prompt('Enter the EB bills'));
+       bill = 0;
+     if (isNaN(units)||units<0){
+      alert('enter the valid input number')
+    } else if (units <= 100) {
+      bill = 0;
+    } else if (units <= 200) {
+      bill = (units - 100) * 2;
+    } else if (units <= 300) {
+      bill = (100 * 2) + (units - 200) * 3;
+    } else if ( units <= 400) {
+      bill = (100 * 2) + (100 * 3) + (units - 300) * 4;
+    } else{
+      bill = (100 * 2) + (100 * 3) + (100 * 4) + (units - 400) * 5;
+    }
+      alert("Your EB Bill amount is ₹" + bill.toFixed(2));
+    </script>
+</body>
+</html>
